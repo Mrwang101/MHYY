@@ -87,7 +87,7 @@ if __name__ == '__main__':
                 print(f'[WARN] 统计信息提交错误：{ana.text}')
         except Exception as e:
             print(f'提交失败！{e}')
-    wait_time = random.randint(1, 3600) # Random Sleep to Avoid Ban
+    wait_time = random.randint(1, 10) # Random Sleep to Avoid Ban
     print(f'为了避免同一时间签到人数太多导致被官方怀疑，开始休眠 {wait_time} 秒')
     time.sleep(wait_time)
     wallet = r.get(WalletURL, headers=headers)
